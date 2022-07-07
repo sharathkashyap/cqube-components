@@ -1,5 +1,6 @@
 import { Component, Input, OnInit,Output,EventEmitter } from '@angular/core';
 import { IDashboardMenu } from '../models/models';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'sb-cqube-program-card',
@@ -18,6 +19,9 @@ export class CqubeProgramCardComponent implements OnInit {
   }
   onClick(data:IDashboardMenu):void {
     this.onProgramClick.emit(data);
+  }
+  len(arr: any){
+    return arr.length;
   }
 
 }

@@ -1,17 +1,17 @@
 <div class="sb-cQ-card sb-cQ-card_2">
     <div class="brand">
-      <div class="title">{{cardInfo.title}}</div>
+      <div class="title">{{cardInfo?.title}}</div>
       <div class="logo">
-        <img class="mg-0" [src]="'assets/images/' + cardInfo.icon" class="px-32" alt="icon here">
+        <img class="mg-0" [src]="'assets/images/' + cardInfo?.icon" class="px-32" alt="icon here">
       </div>
   </div>
     <div class="dataContainer">
-      <ng-container class="metric-wrapper mb-1" *ngFor="let metric of cardInfo.metrics">
-      <div class="sb-cQ-card__data"> <span class="Value">{{metric.value}}</span>
-      <span class="Title">{{metric.name}}</span></div>
+      <ng-container class="metric-wrapper mb-1" *ngFor="let metric of cardInfo?.metrics">
+      <div class="sb-cQ-card__data"> <span class="Value">{{metric?.value}}</span>
+      <span class="Title">{{metric?.name}}</span></div>
       </ng-container>
     </div>
-    <div *ngIf="!len(cardInfo.metrics)">
+    <div *ngIf="!len(cardInfo?.metrics)">
       <p class="text-center">Access dashboard to</p>
       <p class="text-center">view details</p>
    </div>
