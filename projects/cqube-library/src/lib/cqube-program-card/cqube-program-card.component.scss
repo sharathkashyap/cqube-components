@@ -49,9 +49,6 @@
         flex-direction: column;
       justify-content: space-between;
     overflow:inherit;
-    &:hover {
-      background:#fff !important;
-    }
     .brand {
       display:flex;
       flex-direction:row;
@@ -83,7 +80,7 @@
        }
     }
     &:nth-child(n) {
-      background-color:#81aef9;
+      background-color:#FFF;
     }
     
   }

@@ -17,8 +17,8 @@ export class CqubeProgramCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onClick(data:IDashboardMenu):void {
-    this.onProgramClick.emit(data);
+  onClick(evt:Event):void {
+    this.onProgramClick.emit(this.cardInfo);
   }
   len(arr: any){
     return arr.length;
