@@ -1,27 +1,62 @@
-# CqubeComponents
+# Common angular components for Cqube!
+Contains common UI components powered by angular. These components are designed to be used in cqube *(mobile app, web portal, offline desktop app)* to drive reusability, maintainability hence reducing the redundant development effort significantly.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+# Getting Started
+For help getting started with a new Angular app, check out the Angular CLI.
+For existing apps, follow these steps to begin using .
 
-## Development server
+## Step 1: Install the package
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    npm install cqube-library --save
 
-## Code scaffolding
+## Step 2: Include the assets in angular.json
+   
+  Add following under architect.build.assets
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+     {
+	    ...
+	    "build": {
+	    
+	    "builder": "@angular-devkit/build-angular:browser",
+	    
+	    "options": {
+		    ...
+		    ...
+    
+		    "assets": [
+		    
+			   ...
+			   ...
+			    
+			    {
+				    "glob": "**/*.*",
+				    "input": "./node_modules/cqube-library/assets",
+				    "output": "./assets/cqube-library"
+			    }
+		    
+		    ],
+	    
+	    ...
+	    ...
+    
+    },
 
-## Build
+  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Step 3: Import the modules and components
+Import the NgModule for each component you want to use:
+       
+import { CqubeLibraryModule } from 'cqube-library';
+    
+    @NgModule({
+	    ...
+	    
+	    imports: [CqubeLibraryModule],
+	    
+	    ...
+    })
 
-## Running unit tests
+  
+    export class TestAppModule { }
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Available components
