@@ -3,5 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "cqube-library": {
+      "projectType": "library",
+      "root": "projects/cqube-library",
+      "sourceRoot": "projects/cqube-library/src",
+      "prefix": "sb",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/cqube-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/cqube-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/cqube-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cqube-library/src/test.ts",
+            "tsConfig": "projects/cqube-library/tsconfig.spec.json",
+            "karmaConfig": "projects/cqube-library/karma.conf.js"
+          }
+        }
+      }
+    }
   }
 }
