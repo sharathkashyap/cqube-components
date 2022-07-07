@@ -1,0 +1,89 @@
+::ng-deep {
+  :root {
+      --cQ-primary-color:#505af7;
+      --cQcard-bg: #fcfdff;
+      --cQcard-shadowColor: #c9dafd;
+      --cQcard-titleColor: #555;
+      --cQcard-borderColor: #e7eefe;
+      }
+}
+
+.sb-cQ-card {
+  min-width:9.25rem;
+  height:9.25rem;
+  padding:1rem;
+  background:var(--cQcard-bg);
+  border-radius: 1.5rem;
+  border:1px solid #e7eefe;
+  box-shadow:  1rem 1rem 3.5rem #c9dafd,-1rem -1rem 3.5rem #c9dafd;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;text-align:center;
+  &__info {
+    width:1.25rem;
+    height:1.25rem;
+    position:absolute;
+    right:1rem;
+    top:1rem;
+    img {
+      width:100%;
+    }
+  }
+  &__data {
+    display:flex;
+    flex-direction:column;
+    span.Value {
+      font-size:1.5rem;font-weight:bold;
+      color:var(--cQ-primary-color);
+    }
+    span.Title {
+      color:var(--cQcard-titleColor);font-size:0.875rem;
+    }
+  }
+}
+.sb-cQ-card_2 {
+    min-width:20rem;
+    height:20rem;
+    display:flex;
+        flex-direction: column;
+      justify-content: space-between;
+    overflow:inherit;
+    &:hover {
+      background:#fff !important;
+    }
+    .brand {
+      display:flex;
+      flex-direction:row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .dataContainer {
+          display: flex;
+      align-items: center;
+      gap:1rem;
+      div {
+            display: flex;
+      align-items: center;
+        flex-direction:column;
+      }
+    }
+     button {
+          border: 1px solid #dbe2f0;
+      padding: 1rem;
+      border-radius: 1.5rem;
+      width: 100%;
+      font-size: 1rem;
+      background: #f0f4fd;
+       cursor:pointer;
+       &:hover {
+         background:var(--cQ-primary-color);
+         color:var(--cQ-primary-color-contrast);
+       }
+    }
+    &:nth-child(n) {
+      background-color:#81aef9;
+    }
+    
+  }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit,Output,EventEmitter } from '@angular/core';
+import { IDashboardMenu } from '../models/models';
 
 @Component({
   selector: 'sb-cqube-program-card',
@@ -8,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class CqubeProgramCardComponent implements OnInit {
 
   constructor() { }
+  isTextWrapIssueFix: boolean  = false;
+  @Input() cardInfo: IDashboardMenu | undefined;
+  @Output() onProgramClick: EventEmitter<IDashboardMenu | undefined> = new EventEmitter<IDashboardMenu | undefined>();
+  
 
   ngOnInit(): void {
+  }
+  onClick(data:IDashboardMenu):void {
+    this.onProgramClick.emit(data);
   }
 
 }
