@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sb-cqube-info-card',
@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class CqubeInfoCardComponent implements OnInit {
 
   constructor() { }
+
+  @Input() name: string = "";
+  @Input() value: string = "";
+  @Input() tooltip: string = "";
 
   ngOnInit(): void {
   }

@@ -1,19 +1,21 @@
-:root {
---cQ-primary-color:#505af7;
---cQcard-bg: #fcfdff;
---cQcard-shadowColor: #c9dafd;
---cQcard-titleColor: #555;
---cQcard-borderColor: #e7eefe;
+::ng-deep {
+    :root {
+        --cQ-primary-color:#505af7;
+        --cQcard-bg: #fcfdff;
+        --cQcard-shadowColor: #c9dafd;
+        --cQcard-titleColor: #555;
+        --cQcard-borderColor: #e7eefe;
+        }
 }
+
 .sb-cQ-card {
-    width:9.25rem;
     min-width:9.25rem;
     height:9.25rem;
     padding:1rem;
     background:var(--cQcard-bg);
     border-radius: 1.5rem;
-    border:1px solid var(--cQcard-borderColor);
-    box-shadow:  1rem 1rem 3.5rem var(--cQcard-shadowColor),-1rem -1rem 3.5rem var(--cQcard-shadowColor);
+    border:1px solid #e7eefe;
+    box-shadow:  1rem 1rem 3.5rem #c9dafd,-1rem -1rem 3.5rem #c9dafd;
     position:relative;
     display:flex;
     align-items:center;
