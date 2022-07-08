@@ -1,10 +1,15 @@
 ::ng-deep {
   :root {
-      --cQ-primary-color:#505af7;
-      --cQcard-bg: #fcfdff;
-      --cQcard-shadowColor: #c9dafd;
-      --cQcard-titleColor: #555;
-      --cQcard-borderColor: #e7eefe;
+    --cQ-primary:#505af7;
+    --cQ-primary-contrast:#fff;
+    --cQcard-bg: #fcfdff;
+    --cQcard-contrast:#333;
+    --cQcard-border:#e7eefe;
+    --cQcard-boxshadow:#c9dafd;
+    --cQcard-btn-border:#dbe2f0;
+    --white:#fff;
+    --cQ-gray:#333;
+    --cQ-gray555:#555;
       }
 }
 
@@ -14,8 +19,8 @@
   padding:1rem;
   background:var(--cQcard-bg);
   border-radius: 1.5rem;
-  border:1px solid #e7eefe;
-  box-shadow:  1rem 1rem 3.5rem #c9dafd,-1rem -1rem 3.5rem #c9dafd;
+  border:1px solid var(--cQcard-border);
+  box-shadow:  1rem 1rem 3.5rem var(--cQcard-boxshadow),-1rem -1rem 3.5rem var(--cQcard-boxshadow);
   position:relative;
   display:flex;
   align-items:center;
@@ -35,13 +40,15 @@
     flex-direction:column;
     span.Value {
       font-size:1.5rem;font-weight:bold;
-      color:var(--cQ-primary-color);
+      color:var(--cQ-primary);
     }
     span.Title {
-      color:var(--cQcard-titleColor);font-size:0.875rem;
+      color:var(--cQ-gray555);
+      font-size:0.875rem;
     }
   }
 }
+
 .sb-cQ-card_2 {
     min-width:20rem;
     height:20rem;
@@ -55,32 +62,45 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      .title {
+        color:var(--cQ-gray);
+      }
+      .logo {
+        width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    img {
+      max-width:100%;
+    }
+  }
     }
     .dataContainer {
           display: flex;
       align-items: center;
-      gap:1rem;
+      gap:1rem; width: 100%;
       div {
             display: flex;
       align-items: center;
         flex-direction:column;
+        flex:50%;
       }
     }
-     button {
-          border: 1px solid #dbe2f0;
-      padding: 1rem;
-      border-radius: 1.5rem;
-      width: 100%;
-      font-size: 1rem;
-      background: #f0f4fd;
-       cursor:pointer;
-       &:hover {
-         background:var(--cQ-primary-color);
-         color:var(--cQ-primary-color-contrast);
-       }
-    }
-    &:nth-child(n) {
-      background-color:#FFF;
-    }
+    button {
+      border: 0.0625rem solid var(--cQcard-btn-border);
+     padding: 1rem;
+     border-radius: 1.5rem;
+     width: 100%;
+     font-size: 1rem;
+     background: var(--cQcard-bg);
+      cursor:pointer;
+      min-height: 3rem;
+      color:var(--cQcard-contrast);
+      &:hover {
+        background:var(--cQ-primary);
+        color:var(--cQ-primary-contrast);
+      }
+   }
     
   }
