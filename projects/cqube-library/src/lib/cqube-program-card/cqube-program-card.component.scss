@@ -55,6 +55,16 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      .logo {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width:100%;
+       }
+      }
     }
     .dataContainer {
           display: flex;
@@ -68,9 +78,10 @@
     }
      button {
           border: 1px solid #dbe2f0;
-      padding: 1rem;
+      padding: 0.5rem;
       border-radius: 1.5rem;
       width: 100%;
+      height: 3rem;
       font-size: 1rem;
       background: #f0f4fd;
        cursor:pointer;
@@ -79,8 +90,5 @@
          color:var(--cQ-primary-color-contrast);
        }
     }
-    &:nth-child(n) {
-      background-color:#FFF;
-    }
-    
+
   }
