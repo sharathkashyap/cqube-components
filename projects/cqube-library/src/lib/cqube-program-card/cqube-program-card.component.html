@@ -5,6 +5,9 @@
         <img class="mg-0" [src]="'assets/images/' + cardInfo?.icon" alt="icon here">
       </div>
   </div>
+  <!--<i class="fa fa-info-circle fa-2x p-1 pull-right infoIcon" aria-hidden="true" [title]="cardInfo?.tooltip" matTooltipPosition="left"></i>-->
+  <img src="assets/images/info_icon.svg" aria-hidden="true" [title]="cardInfo?.tooltip" matTooltipPosition="left" class="infoIconImage"/>
+  
     <div class="dataContainer">
       <ng-container class="metric-wrapper mb-1" *ngFor="let metric of cardInfo?.metrics">
       <div class="sb-cQ-card__data"> <span class="Value">{{metric?.value}}</span>
