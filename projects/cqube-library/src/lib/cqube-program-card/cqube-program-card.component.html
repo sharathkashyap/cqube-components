@@ -18,5 +18,5 @@
       <p class="text-center">Access dashboard to</p>
       <p class="text-center">view details</p>
    </div>
-     <button type="button" (click)="onClick($event)">Access dashboard <i>→</i></button>
+     <button type="button" [id]="'access_' + cardInfo?.title" [name]="'access_' + cardInfo?.title" (click)="onClick($event)">Access dashboard <i>→</i></button>
   </div>
